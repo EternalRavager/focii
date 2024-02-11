@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #272932;
+    color: #F1E3F3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #F1E3F3;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .task-list {
+    border: 1px solid #F1E3F3;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .task-list h2 {
+    color: #4d7ea8;
+  }
+  
+  #add-task-btn {
+    background-color: #4d7ea8;
+    color: F1E3F3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    height: 20px;
+    background-color: #272932;
+    color: #F1E3F3;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  h1{
+    font-family: 'Sixtyfour', sans-serif;
+    color: #F1E3F3;
+  }

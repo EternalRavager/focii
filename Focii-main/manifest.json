@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Focii",
+  "version": "1.0",
+  "description": "Keep track of how you spend your time on the web.",
+  "icons": { "128": "icon_128.png" },
+  "background": {
+    "scripts": [
+      "background.js",
+      "background2.js"
+  ],
+    "persistent": true
+  },
+  "permissions": [
+    "idle",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "Focii",
+    "default_icon": "icon_19.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.gstatic.com; object-src 'self'"
+}
