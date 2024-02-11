@@ -263,3 +263,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("#options").addEventListener("click", showOptions);
 });
+
+
+function checkBreak() {
+  // Get the current time
+  var currentTime = new Date().getTime();
+  // Get the time of the last break alert (stored in local storage)
+  var lastBreakTime = parseInt(localStorage.getItem('lastBreakTime')) || 0;
+  
+  // Calculate the time elapsed since the last break alert
+  var timeElapsed = currentTime - lastBreakTime;
+  // Convert milliseconds to minutes
+  var minutesElapsed = timeElapsed / (1000 * 60);
+  
+  // If 20 minutes have elapsed since the last break alert
+  if (minutesElapsed >= 1) {
+    // Show an alert to take a short break
+    alert("It's time to take a short break!");
+    // Update the last break time to the current time
+    localStorage.setItem('lastBreakTime', currentTime.toString());
+  }
+}
+
+// Function to start the timer
+function startTimer() {
+  // Check for a break every 1 minute (adjust this interval as needed)
+  setInterval(checkBreak, 1000 * 60);
+}
+
+// Call the function to start the timer when the extension is loaded
+startTimer();

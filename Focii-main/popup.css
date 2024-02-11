@@ -42,3 +42,7 @@ a:focus {
   text-decoration: underline;
   color: red;
 }
+#quote{
+  font-weight: bold;
+  font-family: cursive;
+}

@@ -1,8 +1,6 @@
-chrome.storage.sync.get('switchState', function(data) {
-  var switchState = data.switchState;
+var a= true;
 
-
-  if (switchState) {
+ if (a=false) {
     chrome.runtime.onInstalled.addListener(function() {
       chrome.storage.sync.set({ whitelist: ["youtube.com", "twitter.com"] });
     });
@@ -32,4 +30,3 @@ chrome.storage.sync.get('switchState', function(data) {
     console.log('it is wrong')
     
   }
-});
