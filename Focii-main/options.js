@@ -124,17 +124,21 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-      document.addEventListener('DOMContentLoaded', function() {
-        const onOffSwitch = document.getElementById('myonoffswitch');
-      
-        onOffSwitch.addEventListener('change', function() {
-          chrome.storage.sync.set({ 'toggleState': this.checked });
-        });
-      
-        // Retrieve the initial state of the toggle switch from storage
-        chrome.storage.sync.get('toggleState', function(data) {
-          onOffSwitch.checked = data.toggleState || false;
-        });
-      });
+document.addEventListener('DOMContentLoaded', function() {
+  // Retrieve the current switch state from storage and update the UI
+  chrome.storage.sync.get('switchState', function(data) {
+    var switchState = data.switchState;
+    document.getElementById('switch').checked = switchState;
+  });
+
+  // Add event listener to the switch
+  document.getElementById('switch').addEventListener('change', function() {
+    var switchState = this.checked; // Get the new state of the switch
+    // Update the switch state in storage
+    chrome.storage.sync.set({ switchState: switchState });
+  });
+});
+
+
       
 
